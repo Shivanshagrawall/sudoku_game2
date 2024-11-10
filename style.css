@@ -1,0 +1,160 @@
+/* To Import the Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;400;700&family=Rubik+Bubbles&display=swap');
+
+/* Root Variable */
+:root{
+    --primary-color:rgb(76, 204, 255);
+    --danger-color:red;
+    --background-color:#f2f2f2;
+    --light-color:#fff;
+}
+
+/* Global Variable */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Main Cointainer Section */
+.container {
+    height: 100vh;
+    width: 100%;
+    /* border: 2px solid red; */
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container h1 {
+    font-size: 1.5rem;
+    /* border: 2px solid red; */
+    word-spacing: 1rem;
+    letter-spacing: 0.3rem;
+    text-decoration: underline;
+}
+
+/* To dispaly the Mistake Count */
+.mistake {
+    height: auto;
+    width: 60vmin;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    color: var(--light-color);
+    font-size: 1rem;
+    padding: 0.3rem;
+}
+
+/* Main Game Board */
+.gameBoard {
+    height: 60vmin;
+    width: 60vmin;
+    /* border: 2px solid red; */
+    border: 2px solid #000;
+    background: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    height: calc(100%/9);
+    width: calc(100%/9);
+    border: 0.5px solid rgb(90, 89, 89);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-color);
+}
+
+.filled {
+    background: var(--background-color);
+}
+
+.selected {
+    background: rgba(76, 204, 255, 0.5);
+}
+
+/* Digit */
+.digits {
+    width: 60vmin;
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+.digits .tile {
+    border-radius: 0.3rem;
+    background: var(--primary-color);
+    cursor: pointer;
+    color: var(--light-color);
+    border: 1px solid #000;
+}
+
+.border-right {
+    border-right: 2px solid black;
+}
+
+.border-bottom {
+    border-bottom: 2px solid black;
+}
+
+.danger {
+    color: var(--danger-color);
+}
+
+/* Delete Button and Reset Button */
+.button{
+    width: 60vmin;
+    height: auto;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.deleteButton {
+    font-size: 1.5rem;
+    color: var(--danger-color);
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+.resetButton{
+    width: 6rem;
+    height: auto;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-color);
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.resetButton:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 760px) {
+    .mistake,.gameBoard, .digits, .button {
+        width: 70vmin;
+    }
+}
+
+@media (max-width: 600px) {
+    .mistake,.gameBoard, .digits, .button {
+        width: 80vmin;
+    }
+}

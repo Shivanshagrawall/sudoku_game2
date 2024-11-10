@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <!-- Add favicon -->
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Main Container --><!--------------------------->
+    <div class="container">
+        <h1>Sudoku Game</h1>
+        <!-- Mistake Box -->
+        <div class="mistake">Mistake : <span class="count"> 0 </span> /3 </div>
+        <!-- Main Game Box -->
+        <div class="gameBoard"></div>
+        <!-- Digit Box -->
+        <div class="digits"></div>
+        <!-- Delete Button and Reset Button -->
+        <div class="button">
+            <div class="deleteButton ">
+                <i class="fa fa-trash"></i>
+            </div>
+            <button class="resetButton">Reset Game</button>
+        </div>
+        
+    </div>
+
+    <!-- Link to External JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
